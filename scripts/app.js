@@ -72,8 +72,8 @@ cityForm.addEventListener('submit', e => {
 
     // Update UI with the new city (Displaying data for that city the user search for)
     updateCity(city)
-        .then(data => updateUI(data))
-        .catch(err => console.log(err));
+        .then(data => updateUI(data));
+        
 });
 
 // Display data if local storage exists (else hide)
@@ -100,7 +100,7 @@ window.onload = function(e) {
 
         updateCity(city)
             .then(data => updateUI(data))
-            .catch(err => console.log(err));
+            ;
     }
 };
 
