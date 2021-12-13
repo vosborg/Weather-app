@@ -5,7 +5,7 @@ const key = 'CQJnEfEDogXlTWeCGslRc4sAgiueCjEH';
 // async --> because we make a request and we that to return a promise
 const getWeather = async (id) => {
 
-    const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    const base = 'dataservice.accuweather.com/currentconditions/v1/';
     const query = `${id}?apikey=${key}`;
 
     const response = await fetch(base + query);
@@ -17,7 +17,7 @@ const getWeather = async (id) => {
 // Get City Information
 const getCity = async (city) => {
 
-    const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
+    const base = 'dataservice.accuweather.com/locations/v1/cities/search';
     const query = `?apikey=${key}&q=${city}`;
     const response = await fetch(base + query);
     const data = await response.json();
